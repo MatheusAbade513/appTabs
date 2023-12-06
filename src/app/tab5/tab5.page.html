@@ -1,13 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>tab5</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  
+  <ion-fab vertical="top" horizontal="end">
+    <ion-fab-button (click)="addLikes()">
+      <ion-icon name="thumbs-up-sharp"></ion-icon>
+    </ion-fab-button>
+    <ion-badge color="danger">{{likes}}</ion-badge>
+  </ion-fab>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tab5</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col id="fotoPerfilCol">
+        <ion-icon name="person-outline" id="fotoPerfilIcon"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="nome">Matheus Abade</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="apelido">Matheus</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="i1"><ion-icon name="logo-angular"></ion-icon></ion-col>
+      <ion-col class="i2"><ion-icon name="logo-react"></ion-icon></ion-col>
+      <ion-col class="i3"><ion-icon name="logo-ionic"></ion-icon> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="i2"><ion-icon name="logo-github"></ion-icon></ion-col>
+      <ion-col class="i2"><ion-icon name="logo-reddit"></ion-icon></ion-col>
+      <ion-col class="i2"><ion-icon name="logo-windows"></ion-icon></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="i1"><ion-icon name="logo-twitch"></ion-icon></ion-col>
+      <ion-col class="i2"><ion-icon name="logo-youtube"></ion-icon></ion-col>
+      <ion-col class="i3"><ion-icon name="logo-discord"></ion-icon>x</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
