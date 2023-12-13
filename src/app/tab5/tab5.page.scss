@@ -16,6 +16,12 @@ ion-grid {
     --ion-grid-column-padding-xl: 10px;
 }
 
+.logo-image {
+    width: 45px;
+    height: 45px; 
+}
+
+
 ion-col {
     background-color: #cecece;
     border: solid 1px #fff;
@@ -29,7 +35,7 @@ ion-col {
 }
 
 #fotoPerfilCol {
-    background-color: rgb(32, 135, 154);
+    background-color: #3498db;
     padding: 40px;
 }
 
@@ -50,21 +56,21 @@ ion-col {
 }
 
 .i1 {
-    background-color: rgb(0, 140, 255);
+    background-color: #3498db;
     font-size: 40px;
     padding: 10px;
     margin: 5px;
 }
 
 .i2 {
-    background-color: rgb(0, 140, 255);
+    background-color: #3498db;
     font-size: 40px;
     padding: 10px;
     margin: 5px;
 }
 
 .i3 {
-    background-color: rgb(0, 140, 255);
+    background-color: #3498db;
     font-size: 40px;
     padding: 10px;
     margin: 5px;
@@ -77,5 +83,7 @@ ion-badge{
 }
 
 ion-fab{
+    margin-top: 50px;
     right: 25px;
+    margin-left: -50px;
 }

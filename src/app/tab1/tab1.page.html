@@ -1,38 +1,42 @@
-<ion-content>
-  
-  <ion-fab vertical="top" horizontal="end">
-    <ion-fab-button (click)="addLikes()">
-      <ion-icon name="thumbs-up-sharp"></ion-icon>
-    </ion-fab-button>
-    <ion-badge color="danger">{{likes}}</ion-badge>
-  </ion-fab>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/icon/logo.png" alt="Logo" class="logo-image"/>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      MGA
+    </ion-title>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col id="fotoPerfilCol">
-        <ion-icon name="person-outline" id="fotoPerfilIcon"></ion-icon>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col id="nome">Matheus Abade</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col id="apelido">Matheus</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="i1"><ion-icon name="logo-angular"></ion-icon></ion-col>
-      <ion-col class="i2"><ion-icon name="logo-react"></ion-icon></ion-col>
-      <ion-col class="i3"><ion-icon name="logo-ionic"></ion-icon> </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="i2"><ion-icon name="logo-github"></ion-icon></ion-col>
-      <ion-col class="i2"><ion-icon name="logo-reddit"></ion-icon></ion-col>
-      <ion-col class="i2"><ion-icon name="logo-windows"></ion-icon></ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="i1"><ion-icon name="logo-twitch"></ion-icon></ion-col>
-      <ion-col class="i2"><ion-icon name="logo-youtube"></ion-icon></ion-col>
-      <ion-col class="i3"><ion-icon name="logo-discord"></ion-icon>x</ion-col>
-    </ion-row>
-  </ion-grid>
+    <ion-buttons slot="end">
+      <ion-button (click)="openForm()" style="--background: #000000; --color: #ffffff;">Login/Cadastro</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="false">
+  </ion-header>
+  
+  <div class="background-image" style="background-image: url('https://th.bing.com/th/id/OIG.D94AVHk1HhjbYkd2wpnR?pid=ImgGn'); margin-right: 10px;">
+  </div>
+
+  <div *ngIf="showForm" class="overlay">
+    <div class="form-container">
+      <form (ngSubmit)="submitForm()">
+        <ion-item class="form-item">
+          <ion-label position="floating" class="form-label">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" required class="form-input"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-item">
+          <ion-label position="floating" class="form-label">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password" required class="form-input"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit" class="form-button">Logar</ion-button>
+        <ion-button expand="full" (click)="register()" class="form-button">Cadastro</ion-button>
+        <ion-button expand="full" class="close-button" (click)="closeForm()">Fechar</ion-button>
+      </form>
+    </div>
+  </div>
 </ion-content>
