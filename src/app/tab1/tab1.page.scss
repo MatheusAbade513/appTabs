@@ -39,7 +39,7 @@
   }
 
    .form-container {
-    background-color: #ffffffdc;
+    background-color: #000000ce;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
@@ -49,6 +49,8 @@
   .form-item {
     margin-bottom: 15px;
     border-radius: 8px;
+    --background: #0000001f;
+    
   }
 
   .form-label {
